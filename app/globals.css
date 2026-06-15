@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --marca-purpura: #8b5cf6;
+  --marca-dorado: #fcd34d;
+  --marca-oscuro: #1f2937;
+  --marca-exito: #10b981;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-marca-oscuro antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .btn-primario {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-marca-purpura px-6 py-3 font-semibold text-white transition hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2;
+  }
+  .btn-secundario {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-marca-purpura bg-white px-6 py-3 font-semibold text-marca-purpura transition hover:bg-primary-50;
+  }
+  .btn-dorado {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-marca-dorado px-6 py-3 font-semibold text-marca-oscuro transition hover:brightness-95;
+  }
+  .contenedor {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+  .tarjeta {
+    @apply rounded-2xl border border-gray-100 bg-white shadow-sm transition hover:shadow-md;
+  }
+  .chip {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold;
+  }
+}
+
+/* Patrón de pentagrama sutil para fondos de sección */
+.fondo-pentagrama {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(139, 92, 246, 0.05) 0px,
+    rgba(139, 92, 246, 0.05) 1px,
+    transparent 1px,
+    transparent 12px
+  );
+}
