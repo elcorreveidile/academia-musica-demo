@@ -86,6 +86,9 @@ DALL·E / Midjourney. En esta demo:
 - Los prompts de generación del plan se conservan para producir el set raster
   definitivo cuando se disponga de una herramienta de generación de imágenes.
 
+📄 **Todos los prompts y la guía de marca están en
+[`docs/GUIA-IMAGENES.md`](docs/GUIA-IMAGENES.md).**
+
 ## Variables de entorno
 
 Ver `.env.example`. Ninguna es obligatoria para que la demo arranque; añádelas
