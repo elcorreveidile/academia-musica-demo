@@ -28,14 +28,17 @@ export const metadata: Metadata = {
   keywords: ["clases de música", "aprender guitarra", "piano online", "clases en vivo", "comunidad musical"],
   manifest: "/site.webmanifest",
   icons: {
-    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/brand/logo-simbolo.png", type: "image/png", sizes: "512x512" },
+    ],
   },
   openGraph: {
     title: "Academia de Música — Aprende música desde cero",
     description: "Clases en vivo + lecciones grabadas + comunidad. Tu viaje musical empieza aquí.",
     type: "website",
     locale: "es_ES",
-    images: ["/images/social/og-image.svg"],
+    images: ["/images/social/og-image.png"],
   },
 };
 

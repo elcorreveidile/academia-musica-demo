@@ -127,7 +127,7 @@ export default function DashboardPage() {
           <div className="rounded-2xl border border-gray-100 bg-white p-6">
             <h3 className="mb-2 font-display text-base font-semibold">💬 Feedback reciente</h3>
             <blockquote className="border-l-4 border-marca-purpura pl-3 text-sm text-gray-600">
-              «¡Gran mejora en los cambios de acorde! Trabaja la mano derecha y lo bordas.» — Lucía F.
+              «¡Gran mejora en los cambios de acorde! Trabaja la mano derecha y lo bordas.» — Lucas F.
             </blockquote>
           </div>
         </aside>
