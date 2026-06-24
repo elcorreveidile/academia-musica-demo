@@ -1,19 +1,28 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-marca text-white">
-      <div className="absolute inset-0 fondo-pentagrama opacity-40" aria-hidden="true" />
-      {/* notas decorativas */}
-      <div className="pointer-events-none absolute right-10 top-10 select-none text-6xl opacity-20" aria-hidden="true">♪</div>
-      <div className="pointer-events-none absolute bottom-10 right-1/3 select-none text-8xl opacity-10" aria-hidden="true">♫</div>
+    <section className="relative isolate overflow-hidden text-white">
+      {/* Imagen de fondo grande */}
+      <Image
+        src="/images/fondos/hero-home.jpg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="-z-20 object-cover"
+      />
+      {/* Overlay de marca (más opaco a la izquierda para legibilidad del texto) */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-marca-purpura/95 via-marca-purpura/80 to-marca-oscuro/40" />
+      <div className="pointer-events-none absolute inset-0 -z-10 fondo-pentagrama opacity-20" aria-hidden="true" />
 
-      <div className="contenedor relative grid items-center gap-10 py-20 md:grid-cols-2 md:py-28">
-        <div>
+      <div className="contenedor relative grid items-center py-24 md:py-32">
+        <div className="max-w-2xl">
           <span className="chip mb-5 bg-white/15 text-marca-dorado">
             🎵 Clases en vivo + lecciones grabadas
           </span>
-          <h1 className="font-display text-4xl font-bold leading-tight md:text-5xl">
+          <h1 className="font-display text-4xl font-bold leading-tight drop-shadow md:text-6xl">
             Aprende música<br />desde cero
           </h1>
           <p className="mt-5 max-w-md text-lg text-white/90">
@@ -28,30 +37,10 @@ export function HeroSection() {
               Ver clases en vivo
             </Link>
           </div>
-          <div className="mt-8 flex items-center gap-6 text-sm text-white/80">
+          <div className="mt-10 flex items-center gap-8 text-sm text-white/80">
             <div><span className="font-display text-2xl font-bold text-white">7</span><br />instrumentos</div>
             <div><span className="font-display text-2xl font-bold text-white">+2.500</span><br />alumnos</div>
             <div><span className="font-display text-2xl font-bold text-white">4,9★</span><br />valoración</div>
-          </div>
-        </div>
-
-        <div className="relative hidden md:block">
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              { icono: "🎸", txt: "Guitarra" },
-              { icono: "🎹", txt: "Piano" },
-              { icono: "🎤", txt: "Voz" },
-              { icono: "🥁", txt: "Batería" },
-            ].map((x, i) => (
-              <div
-                key={x.txt}
-                className={`rounded-2xl bg-white/10 p-6 backdrop-blur ${i % 2 ? "translate-y-6" : ""}`}
-              >
-                <div className="text-4xl">{x.icono}</div>
-                <div className="mt-3 font-semibold">{x.txt}</div>
-                <div className="text-sm text-white/70">Desde iniciación</div>
-              </div>
-            ))}
           </div>
         </div>
       </div>
