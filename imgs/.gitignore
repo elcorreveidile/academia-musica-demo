@@ -1,0 +1,7 @@
+# Ignorar todas las imágenes de esta carpeta
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.webp
